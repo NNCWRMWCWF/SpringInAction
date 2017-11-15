@@ -25,9 +25,13 @@ public class Audience {
 
 	@Around("perfomance()")
 	public void watchPerform(ProceedingJoinPoint jp) {
+		try {
 		System.out.println("Take your seats");
 		jp.proceed();
 		System.out.println("Appause");
+		} catch (Throwable e) {
+			
+		}
 		
 	}
 	
