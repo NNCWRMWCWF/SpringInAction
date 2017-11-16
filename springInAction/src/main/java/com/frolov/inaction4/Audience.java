@@ -29,8 +29,9 @@ public class Audience {
 		System.out.println("Take your seats");
 		jp.proceed();
 		System.out.println("Appause");
+		jp.proceed();
 		} catch (Throwable e) {
-			
+			System.out.println(e);
 		}
 		
 	}
