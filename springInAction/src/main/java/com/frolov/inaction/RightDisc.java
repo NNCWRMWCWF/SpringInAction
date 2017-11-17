@@ -1,7 +1,7 @@
 package com.frolov.inaction;
 
 public class RightDisc implements CompactDisc{
-	public void play(){
+	public void playTrack(int track){
 		System.out.println("RightDisc");
 	}
 

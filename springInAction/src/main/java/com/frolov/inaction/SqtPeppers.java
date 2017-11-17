@@ -2,7 +2,7 @@ package com.frolov.inaction;
 
 public class SqtPeppers implements CompactDisc{
 
-	public void play() {
+	public void playTrack(int track) {
 		System.out.println("play");
 	}
 }

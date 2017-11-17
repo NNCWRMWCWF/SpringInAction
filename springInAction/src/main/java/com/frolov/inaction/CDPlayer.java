@@ -11,7 +11,7 @@ public class CDPlayer {
 	public void setDisc(CompactDisc disc) {		
 		this.disc = disc;
 	}
-	public void play() {
-		disc.play();
+	public void play(int track) {
+		disc.playTrack(track);
 	}
 }
