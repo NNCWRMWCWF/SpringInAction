@@ -28,7 +28,6 @@ public class CDPlayerConfig {
 	}
 	
 	@Bean
-	@Primary
 	public LeftDisc leftDisc() {
 		return new LeftDisc();
 	}
@@ -39,9 +38,9 @@ public class CDPlayerConfig {
 		return new RightDisc();
 	}
 	
-	@Bean
-	public CompactDisc blankDisc() {
-		List<String> list = Arrays.asList("OneTrack", "TwoTrack", "ThreeTrack");
-		return new BlankDisc(null, null);
-	}
+//	@Bean
+//	public CompactDisc blankDisc() {
+//		List<String> list = Arrays.asList("OneTrack", "TwoTrack", "ThreeTrack");
+//		return new BlankDisc(null, null);
+//	}
 }

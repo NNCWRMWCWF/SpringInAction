@@ -1,5 +1,6 @@
 package com.frolov.inaction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -9,11 +10,10 @@ public class BlankDisc implements CompactDisc{
 	private String album;
 	private List<String> tracks;
 	
-	public BlankDisc(
-			@Value("#{systemProperties['disc.title']}") String album,
-			@Value("#{systemProperties['disc.singer']}") String artist) {
+	public BlankDisc(String album, String artist) {
 			this.album = album;
 			this.artist = artist;
+			tracks = new ArrayList<>();
 			}
 
 	public String getArtist() {
@@ -41,8 +41,8 @@ public void setTracks(List<String> tracks) {
 }
 
 	public void playTrack(int track) {
-		System.out.println(artist + " " + album + " " + tracks);
-		tracks.stream().forEach(System.out::println);
+		System.out.println(artist + " " + album + " " + tracks.get(track));
+		//tracks.stream().forEach(System.out::println);
 	}
 
 }
